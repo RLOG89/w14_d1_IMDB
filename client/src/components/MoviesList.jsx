@@ -5,7 +5,7 @@ var MoviesList = React.createClass({
   render: function() {
     var movieNodes = this.props.data.map(function(movie) {
       return(
-        <Movie showtimes={movie.showtimes} key={movie.id}> {movie.movie} </Movie>
+        <Movie key={movie.id} title= {movie.title} showtimes={movie.showtimes} > </Movie>
       );
     });
     return(

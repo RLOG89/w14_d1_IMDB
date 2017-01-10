@@ -19759,7 +19759,7 @@
 	var Movie = __webpack_require__(161);
 	var MovieButton = __webpack_require__(162);
 	
-	var sampleData = [{ id: 1, movie: 'Sausage Party', showtimes: '10.00am, 7.00pm' }, { id: 2, movie: 'Cafe Society', showtimes: '3.00pm, 8.30pm' }, { id: 3, movie: 'Morgan', showtimes: '5.00pm' }, { id: 4, movie: 'The 9th Life of Louis Drax', showtimes: '10.00pm, 11.00pm' }, { id: 5, movie: 'Naam Hal Akira', showtimes: '1.00pm' }];
+	var sampleData = [{ id: 1, title: 'Sausage Party', showtimes: '10.00am, 7.00pm' }, { id: 2, title: 'Cafe Society', showtimes: '3.00pm, 8.30pm' }, { id: 3, title: 'Morgan', showtimes: '5.00pm' }, { id: 4, title: 'The 9th Life of Louis Drax', showtimes: '10.00pm, 11.00pm' }, { id: 5, title: 'Naam Hal Akira', showtimes: '1.00pm' }];
 	
 	var UKMovies = React.createClass({
 	  displayName: 'UKMovies',
@@ -19801,9 +19801,7 @@
 	    var movieNodes = this.props.data.map(function (movie) {
 	      return React.createElement(
 	        Movie,
-	        { showtimes: movie.showtimes, key: movie.id },
-	        ' ',
-	        movie.movie,
+	        { key: movie.id, title: movie.title, showtimes: movie.showtimes },
 	        ' '
 	      );
 	    });
@@ -19834,10 +19832,14 @@
 	      { className: 'movie' },
 	      React.createElement(
 	        'h3',
+	        null,
+	        this.props.title
+	      ),
+	      React.createElement(
+	        'li',
 	        { className: 'showtimes' },
 	        this.props.showtimes
-	      ),
-	      this.props.children
+	      )
 	    );
 	  }
 	});
