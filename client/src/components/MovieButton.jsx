@@ -2,10 +2,11 @@ var React = require('react')
 
 var MovieButton = React.createClass({
   render: function() {
+    var url = 'http://www.imdb.com/'
     return(
-      <div className='movie-button'>
-        Movie-button
-      </div>
+      <a href={url}><button className='movie-button'>
+        View All Movies
+      </button></a>
     );
   }
 });

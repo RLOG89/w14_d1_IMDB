@@ -19825,19 +19825,6 @@
 	
 	var React = __webpack_require__(1);
 	
-	// var Movie = React.createClass({
-	//   render: function() {
-	//     return(
-	//       <div className='movie'>
-	//         <h3 className='showtimes'>
-	//         {this.props.showtimes}
-	//         </h3>
-	//         {this.props.children}
-	//       </div>
-	//     );
-	//   }
-	// });
-	
 	var Movie = React.createClass({
 	  displayName: 'Movie',
 	
@@ -19869,10 +19856,15 @@
 	  displayName: 'MovieButton',
 	
 	  render: function render() {
+	    var url = 'http://www.imdb.com/';
 	    return React.createElement(
-	      'div',
-	      { className: 'movie-button' },
-	      'Movie-button'
+	      'a',
+	      { href: url },
+	      React.createElement(
+	        'button',
+	        { className: 'movie-button' },
+	        'View All Movies'
+	      )
 	    );
 	  }
 	});

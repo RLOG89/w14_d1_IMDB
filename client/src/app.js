@@ -1,6 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var UKMovies = require('./UKMovies.jsx')
+var UKMovies = require('./components/UKMovies.jsx')
 
 window.onload = function(){
   ReactDOM.render(
